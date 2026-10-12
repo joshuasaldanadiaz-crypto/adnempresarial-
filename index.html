@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ADN Empresarial - La Fórmula Detrás del Éxito</title>
-  <!-- Google Fonts & FontAwesome Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
@@ -13,16 +12,11 @@
       --gold: #D4AF37;
       --gold-light: #F3E5AB;
       --bg-dark: #0d0d0d;
-      --card-bg: rgba(25, 20, 15, 0.85);
+      --card-bg: rgba(25, 20, 15, 0.9);
       --text-light: #F5F5F5;
-      --accent-brown: #3d2b1f;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Montserrat', sans-serif;
@@ -32,7 +26,6 @@
       overflow-x: hidden;
     }
 
-    /* Header & Nav */
     header {
       position: fixed;
       top: 0;
@@ -41,7 +34,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(10, 10, 10, 0.9);
+      background: rgba(10, 10, 10, 0.95);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(212, 175, 55, 0.2);
       z-index: 1000;
@@ -63,16 +56,14 @@
       transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: var(--gold);
-    }
+    nav a:hover { color: var(--gold); }
 
     /* Reproductor de Música Flotante */
     .music-control {
       position: fixed;
       bottom: 25px;
       right: 25px;
-      background: rgba(212, 175, 55, 0.15);
+      background: rgba(212, 175, 55, 0.2);
       border: 1px solid var(--gold);
       padding: 12px 20px;
       border-radius: 30px;
@@ -82,8 +73,9 @@
       cursor: pointer;
       backdrop-filter: blur(8px);
       z-index: 1000;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
       transition: all 0.3s;
+      color: var(--gold-light);
     }
 
     .music-control:hover {
@@ -91,7 +83,6 @@
       color: #000;
     }
 
-    /* Hero Section */
     .hero {
       height: 100vh;
       display: flex;
@@ -100,7 +91,6 @@
       align-items: center;
       text-align: center;
       padding: 0 20px;
-      background: linear-gradient(0deg, rgba(5,5,5,0.9) 0%, rgba(20,15,10,0.4) 100%);
     }
 
     .hero h2 {
@@ -129,7 +119,6 @@
       line-height: 1.6;
     }
 
-    /* Cuenta Regresiva */
     .timer {
       display: flex;
       gap: 20px;
@@ -157,7 +146,6 @@
       text-transform: uppercase;
     }
 
-    /* Secciones Generales */
     section {
       padding: 100px 50px;
       max-width: 1200px;
@@ -182,7 +170,6 @@
       margin: 15px auto 0;
     }
 
-    /* Grid de Ponentes */
     .speakers-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -191,7 +178,7 @@
 
     .speaker-card {
       background: var(--card-bg);
-      border: 1px solid rgba(212, 175, 55, 0.2);
+      border: 1px solid rgba(212, 175, 55, 0.25);
       border-radius: 12px;
       padding: 30px 20px;
       text-align: center;
@@ -204,50 +191,30 @@
     }
 
     .speaker-avatar {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       margin: 0 auto 20px;
-      border: 2px solid var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(212, 175, 55, 0.1);
-      font-size: 2.5rem;
-      color: var(--gold);
+      border: 3px solid var(--gold);
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
     }
 
-    .speaker-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 8px;
-    }
-
-    .speaker-card .tag {
-      color: var(--gold);
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 15px;
-      display: block;
-    }
-
-    .speaker-card p {
-      font-size: 0.9rem;
-      color: #bbb;
-      line-height: 1.5;
-    }
+    .speaker-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+    .speaker-card .tag { color: var(--gold); font-size: 0.85rem; font-weight: 600; margin-bottom: 15px; display: block; }
+    .speaker-card p { font-size: 0.9rem; color: #bbb; line-height: 1.5; }
 
     .badge-pending {
       display: inline-block;
-      margin-top: 10px;
-      padding: 4px 12px;
-      background: rgba(255, 255, 255, 0.1);
+      margin-top: 12px;
+      padding: 5px 14px;
+      background: rgba(212, 175, 55, 0.1);
       border: 1px dashed var(--gold);
       border-radius: 15px;
       font-size: 0.75rem;
       color: var(--gold-light);
     }
 
-    /* Detalles del Evento */
     .event-details {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -264,22 +231,10 @@
       gap: 20px;
     }
 
-    .detail-item i {
-      font-size: 2rem;
-      color: var(--gold);
-    }
+    .detail-item i { font-size: 2rem; color: var(--gold); }
+    .detail-item h4 { font-size: 1.1rem; margin-bottom: 5px; }
+    .detail-item p { color: #aaa; font-size: 0.95rem; }
 
-    .detail-item h4 {
-      font-size: 1.1rem;
-      margin-bottom: 5px;
-    }
-
-    .detail-item p {
-      color: #aaa;
-      font-size: 0.95rem;
-    }
-
-    /* Footer */
     footer {
       text-align: center;
       padding: 40px;
@@ -297,18 +252,18 @@
 </head>
 <body>
 
-  <!-- Audio de Fondo (Música Instrumental Elegante) -->
+  <!-- Música de fondo elegante con enlace directo verificado -->
   <audio id="bg-music" loop>
-    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a221f7.mp3?filename=piano-moment-110825.mp3" type="audio/mpeg">
+    <source src="https://actions.google.com/sounds/v1/ambiences/coffee_shop.ogg" type="audio/ogg">
+    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf756.mp3?filename=gentle-piano-110645.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Botón de Música Flotante -->
   <div class="music-control" id="music-btn" onclick="toggleMusic()">
     <i class="fa-solid fa-music" id="music-icon"></i>
-    <span id="music-text">Música Ambientación</span>
+    <span id="music-text">Activar Música</span>
   </div>
 
-  <!-- Header / Menú -->
   <header>
     <div class="logo">ADN EMPRESARIAL</div>
     <nav>
@@ -318,13 +273,11 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero" id="inicio">
     <h2>Foro Magistral</h2>
     <h1>ADN EMPRESARIAL</h1>
     <p>La Fórmula Detrás del Éxito. Un encuentro exclusivo diseñado para conectar, formar e inspirar a la nueva comunidad empresarial de Xalapa.</p>
     
-    <!-- Contador -->
     <div class="timer">
       <div class="timer-box"><span id="days">00</span><label>Días</label></div>
       <div class="timer-box"><span id="hours">00</span><label>Horas</label></div>
@@ -333,26 +286,21 @@
     </div>
   </section>
 
-  <!-- Sección de Ponentes -->
   <section id="ponentes">
     <h2 class="section-title">Ponentes Confirmados</h2>
     <div class="speakers-grid">
       
       <!-- Card: Saldaña Díaz -->
       <div class="speaker-card">
-        <div class="speaker-avatar">
-          <i class="fa-solid fa-user-tie"></i>
-        </div>
+        <img src="image_3.png" alt="Saldaña Díaz" class="speaker-avatar">
         <h3>Saldaña Díaz</h3>
         <span class="tag">Organizador & Young Entrepreneur</span>
-        <p>Joven empresario xalapeño de 16 años, fundador del Foro ADN Empresarial e impulsor de iniciativas con alto impacto económico y social en la región.</p>
+        <p>Joven empresario xalapeño de 16 años, fundador del Foro ADN Empresarial e impulsor de iniciativas con alto impacto económico y social en la región[span_2](start_span)[span_2](end_span).</p>
       </div>
 
       <!-- Card: Sra. Patricia Montiel -->
       <div class="speaker-card">
-        <div class="speaker-avatar">
-          <i class="fa-solid fa-gem"></i>
-        </div>
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Sra. Patricia Montiel" class="speaker-avatar">
         <h3>Sra. Patricia Montiel</h3>
         <span class="tag">Grupo Montiel - Ponente Magistral</span>
         <p>Referente del sector empresarial regional. Compartirá las claves de liderazgo, resiliencia y expansión que consolidaron a Grupo Montiel.</p>
@@ -360,9 +308,7 @@
 
       <!-- Card: Samantha Aguilar -->
       <div class="speaker-card">
-        <div class="speaker-avatar">
-          <i class="fa-solid fa-wand-magic-sparkles"></i>
-        </div>
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Samantha Aguilar" class="speaker-avatar">
         <h3>Samantha Aguilar</h3>
         <span class="tag">Allegro Cosmetología - Ponente Magistral</span>
         <p>Líder en innovación y desarrollo de marca personal. Expondrá estrategias para el posicionamiento efectivo de negocios de alto crecimiento.</p>
@@ -370,9 +316,7 @@
 
       <!-- Card: Marcus Dantus -->
       <div class="speaker-card">
-        <div class="speaker-avatar">
-          <i class="fa-solid fa-chart-line"></i>
-        </div>
+        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80" alt="Marcus Dantus" class="speaker-avatar">
         <h3>Marcus Dantus</h3>
         <span class="tag">Shark Tank México</span>
         <p>Visionario inversionista y conferencista magno sobre emprendimiento de alto impacto y escala empresarial.</p>
@@ -382,7 +326,6 @@
     </div>
   </section>
 
-  <!-- Sección del Evento -->
   <section id="evento">
     <h2 class="section-title">Detalles de la Sede</h2>
     <div class="event-details">
@@ -412,14 +355,11 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2026 ADN Empresarial. Todos los derechos reservados. | Xalapa, Veracruz</p>
   </footer>
 
-  <!-- Scripts JavaScript -->
   <script>
-    // Reproducción de Música
     const music = document.getElementById('bg-music');
     const musicBtn = document.getElementById('music-btn');
     const musicIcon = document.getElementById('music-icon');
@@ -430,16 +370,16 @@
       if (isPlaying) {
         music.pause();
         musicIcon.className = "fa-solid fa-music";
-        musicText.innerText = "Música Ambientación";
+        musicText.innerText = "Activar Música";
       } else {
-        music.play();
-        musicIcon.className = "fa-solid fa-pause";
-        musicText.innerText = "Pausar Música";
+        music.play().then(() => {
+          musicIcon.className = "fa-solid fa-pause";
+          musicText.innerText = "Pausar Música";
+        }).catch(e => console.log("Audio play blocked", e));
       }
       isPlaying = !isPlaying;
     }
 
-    // Cuenta Regresiva para el 6 de Noviembre de 2026
     const eventDate = new Date('November 6, 2026 17:00:00').getTime();
 
     setInterval(() => {
@@ -456,4 +396,3 @@
   </script>
 </body>
 </html>
-
